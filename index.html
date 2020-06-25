@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <template id="template-picture">
+        <div>
+            <h1>{{title}}</h1>
+            <img :src="picture_url" :alt="title" width="150">
+        </div>
+    </template>
+    <img src="" alt="" >
+
+    <div id="main">
+        <picture-card v-for="(picture, index) in pictures" :key="index" :title="picture.title" :picture_url="picture.picture_url">
+        </picture-card>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
